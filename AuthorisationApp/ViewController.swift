@@ -79,8 +79,5 @@ class ViewController: UIViewController, UITextFieldDelegate {
         usernameTextField.text = ""
         passwordTextField.text = ""
     }
-    
-  
-
-    }
+}
 
