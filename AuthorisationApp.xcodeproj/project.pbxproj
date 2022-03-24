@@ -13,6 +13,7 @@
 		FECA8EF627ECCDCB008B4D1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECA8EF427ECCDCB008B4D1D /* Main.storyboard */; };
 		FECA8EF827ECCDCC008B4D1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FECA8EF727ECCDCC008B4D1D /* Assets.xcassets */; };
 		FECA8EFB27ECCDCC008B4D1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECA8EF927ECCDCC008B4D1D /* LaunchScreen.storyboard */; };
+		FECA8F0527ECEA44008B4D1D /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA8F0427ECE977008B4D1D /* LoggedInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FECA8EF727ECCDCC008B4D1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FECA8EFA27ECCDCC008B4D1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FECA8EFC27ECCDCC008B4D1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FECA8F0427ECE977008B4D1D /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				FECA8EF027ECCDCA008B4D1D /* SceneDelegate.swift */,
 				FECA8EF227ECCDCA008B4D1D /* ViewController.swift */,
 				FECA8EF427ECCDCB008B4D1D /* Main.storyboard */,
+				FECA8F0427ECE977008B4D1D /* LoggedInViewController.swift */,
 				FECA8EF727ECCDCC008B4D1D /* Assets.xcassets */,
 				FECA8EF927ECCDCC008B4D1D /* LaunchScreen.storyboard */,
 				FECA8EFC27ECCDCC008B4D1D /* Info.plist */,
@@ -141,6 +144,7 @@
 				FECA8EF327ECCDCA008B4D1D /* ViewController.swift in Sources */,
 				FECA8EEF27ECCDCA008B4D1D /* AppDelegate.swift in Sources */,
 				FECA8EF127ECCDCA008B4D1D /* SceneDelegate.swift in Sources */,
+				FECA8F0527ECEA44008B4D1D /* LoggedInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
