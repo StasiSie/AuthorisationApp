@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let loggedInVC = segue.destination as? LoggedInViewController else {return}
-        loggedInVC.loggedUserLabel.text = usernameTextField.text ?? "" + " , you've logged in!"
+        loggedInVC.user = login
         
     }
     
@@ -56,7 +56,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func loggingIn() {
-        if usernameTextField.text != login && passwordTextField.text != password {
+        if usernameTextField.text != login || passwordTextField.text != password {
             let alert = UIAlertController(title: "Incorrect user info",
                                           message: "Check if your login or password is correct",
                                           preferredStyle: .alert)
