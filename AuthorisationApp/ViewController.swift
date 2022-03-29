@@ -32,37 +32,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    super .touchesBegan(touches, with: event)
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
 
     @IBAction func passwordAlert() {
-        let alert = UIAlertController(title: "Forgot password?",
-                                      message: "Here's your password: 12345",
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: {(action) -> Void in
-            print("The user is not okay.")}))
-        self.present(alert, animated: true, completion: nil)
+        setAlert(header: "Forgot password?", body: "Here's your password: 12345")
     }
     
     @IBAction func usernameAlert() {
-        let alert = UIAlertController(title: "Forgot username?",
-                                      message: "Here's your username: qwerty",
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: {(action) -> Void in
-            print("The user is not okay.")}))
-        self.present(alert, animated: true, completion: nil)
+        setAlert(header: "Forgot username?", body: "Here's your username: qwerty")
     }
     
     
     
     @IBAction func loggingIn() {
         if usernameTextField.text != login || passwordTextField.text != password {
-            let alert = UIAlertController(title: "Incorrect user info",
-                                          message: "Check if your login or password is correct",
-                                          preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: {(action) -> Void in
-                print("The user is not okay.")}))
-            self.present(alert, animated: true, completion: nil)
+            setAlert(header: "Incorrect user info", body: "Check if your username or password is correct")
     }
     
     }
@@ -72,12 +58,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
             return true
         } else {
-            return false
+            loggingIn()
+            performSegue(withIdentifier: "LogginIn", sender: loginButton)
+            return true
         }
     }
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         usernameTextField.text = ""
         passwordTextField.text = ""
+    }
+    private func setAlert(header: String, body: String) {
+        let alert = UIAlertController(title: header,
+                                      message: body,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: {(action) -> Void in
+            print("The user is not okay.")}))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="Ski-bJ-W6P">
-                                <rect key="frame" x="158" y="129" width="98" height="102"/>
+                                <rect key="frame" x="158" y="199.5" width="98" height="102"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPc-is-I1d">
                                         <rect key="frame" x="0.0" y="0.0" width="98" height="34"/>
@@ -30,23 +30,20 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="W94-53-Xt3" firstAttribute="height" secondItem="GPc-is-I1d" secondAttribute="height" id="bhR-EL-Q88"/>
-                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mi3-Mw-Nc8">
-                                <rect key="frame" x="175.5" y="291" width="63.5" height="31"/>
+                                <rect key="frame" x="175.5" y="361.5" width="63.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log in">
                                     <color key="baseForegroundColor" systemColor="systemGray6Color"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loggingIn" destination="BYZ-38-t0r" eventType="touchUpInside" id="BlY-sS-hjc"/>
-                                    <segue destination="00c-LW-TTC" kind="show" identifier="" id="IDK-lw-KTH"/>
+                                    <segue destination="00c-LW-TTC" kind="show" identifier="LogginIn" id="IDK-lw-KTH"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sL0-CK-4O5">
-                                <rect key="frame" x="65.5" y="339" width="283" height="31"/>
+                                <rect key="frame" x="65.5" y="409.5" width="283" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKY-L0-Qe4">
                                         <rect key="frame" x="0.0" y="0.0" width="141.5" height="31"/>
@@ -74,13 +71,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                         <constraints>
-                            <constraint firstItem="Ski-bJ-W6P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J2Q-ZA-hPE"/>
-                            <constraint firstItem="Mi3-Mw-Nc8" firstAttribute="top" secondItem="Ski-bJ-W6P" secondAttribute="bottom" constant="60" id="TJc-VH-jza"/>
-                            <constraint firstItem="Mi3-Mw-Nc8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WOw-2Q-Ije"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sL0-CK-4O5" secondAttribute="bottom" constant="492" id="cKu-3G-vcY"/>
-                            <constraint firstItem="Ski-bJ-W6P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="e47-ub-5Cg"/>
-                            <constraint firstItem="sL0-CK-4O5" firstAttribute="top" secondItem="Mi3-Mw-Nc8" secondAttribute="bottom" constant="17" id="mQ7-UK-uaS"/>
-                            <constraint firstItem="sL0-CK-4O5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nS6-fU-xZ6"/>
+                            <constraint firstItem="Ski-bJ-W6P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2XF-Oi-PeQ"/>
+                            <constraint firstItem="sL0-CK-4O5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-23" id="FcD-rd-2Bl"/>
+                            <constraint firstItem="Mi3-Mw-Nc8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OVR-oW-eWo"/>
+                            <constraint firstItem="sL0-CK-4O5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dg2-6G-Zu0"/>
+                            <constraint firstItem="Mi3-Mw-Nc8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-71" id="pvh-UK-nnH"/>
+                            <constraint firstItem="Ski-bJ-W6P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-197.5" id="yPb-ew-DB7"/>
                         </constraints>
                     </view>
                     <connections>
