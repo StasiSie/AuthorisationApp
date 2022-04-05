@@ -15,8 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var forgotUsernameButton: UIButton!
     @IBOutlet var forgotPasswordButton: UIButton!
     
-    private let login = "qwerty"
-    private let password = "12345"
+    private let userInfo = User.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +25,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let loggedInVC = segue.destination as? LoggedInViewController else {return}
-        loggedInVC.user = login
+        guard let tabBarController = segue.destination as? UITabBarController else {return}
+        guard let viewControllers = tabBarController.viewControllers else {return}
+        for viewController in viewControllers {
+            if let loggedInVC = viewController as? LoggedInViewController {
+                loggedInVC.user = userInfo.person.fullName
+            } else if let aboutVC = viewController as? AboutViewController {
+                aboutVC.fullName = userInfo.person.fullName
+                aboutVC.university = userInfo.person.education
+                aboutVC.age = userInfo.person.age
+            } else if let hobbieVC = viewController as? HobbiesViewController {
+                hobbieVC.hobbie1 = userInfo.person.hobbie1
+                hobbieVC.hobbie2 = userInfo.person.hobbie2
+            }
+            
+        }
+        
         
     }
     
@@ -37,17 +50,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func passwordAlert() {
-        setAlert(header: "Forgot password?", body: "Here's your password: 12345")
+        setAlert(header: "Forgot password?", body: "Here's your password: \(userInfo.password)")
     }
     
     @IBAction func usernameAlert() {
-        setAlert(header: "Forgot username?", body: "Here's your username: qwerty")
+        setAlert(header: "Forgot username?", body: "Here's your username: \(userInfo.login)")
     }
     
     
     
     @IBAction func loggingIn() {
-        if usernameTextField.text != login || passwordTextField.text != password {
+        if usernameTextField.text != userInfo.login || passwordTextField.text != userInfo.password {
             setAlert(header: "Incorrect user info", body: "Check if your username or password is correct")
     }
     
